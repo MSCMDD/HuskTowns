@@ -35,3 +35,10 @@ jobs:
         if: success() || failure() # always run even if the previous step fails
         with:
           report_paths: '**/build/test-results/test/TEST-*.xml'
+      - name: 编译输出
+        uses: actions/upload-artifact@v3
+        if: success() || failure() 
+        with:
+          name: plugins
+          path: target
+          if-no-files-found: error
