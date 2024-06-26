@@ -86,7 +86,7 @@ subprojects {
     }
 
     // API publishing
-    if (['common','bukkit'].contains(project.name)) {
+    if (['common', 'bukkit'].contains(project.name)) {
         java {
             withSourcesJar()
             withJavadocJar()
